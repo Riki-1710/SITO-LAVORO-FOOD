@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+}
+
+.sidebar {
+    flex: 0.10; 
+    max-width: 180px; 
+    border-right: 2px solid #09721e;
+    padding: 10px; 
+    overflow-y: auto;
+}
+
+.sidebar {
+    height: auto; 
+    min-height: 80vh; 
+}
+
+
+.sidebar > i {
+    font-size: 40px;
+    margin: 30px 0 30px 20px;
+    color: #09721e;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.sidebar > i:hover {
+    animation: spin 2.5s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.sidebar .fa-sun {
+    color: darkgoldenrod;
+}
+
+.sidebarOption .fa-house, 
+.fa-comments{
+    color: black;
+}
+
+.sidebarOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px;
+    position: relative;
+    color: black;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.sidebarOption i {
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.sidebarOption h2 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 20px;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.sidebarOption h2::before {
+    content: '';
+    position: absolute;
+    background-color: #09721e;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.sidebarOption h2:hover::before {
+    width: 100%;
+}
+
+.sidebarOption::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+.sidebarOption.active,
+.sidebarOption.active i {
+    color: #09721e;
+}
+
+.sidebarOption.active::before {
+    background-color: #09721e;
+}
+
+.sidebarOption:hover,
+.sidebarOption:hover i {
+    color: #09721e;
+    background-color: none ;
+    border-radius: 30px;
+}
+
+.sidebarOption:hover::before {
+    background-color: #09721e;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+.sidebar {
+    border-right: 2px solid #09721e;
+    flex: 0.3;
+    min-width: 250px;
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.feed {
+    flex: 0.5;
+    border-right: 2px solid #cbb59e;
+    min-width: fit-content;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.feed::-webkit-scrollbar {
+    display: none;
+}
+
+.feed__header {
+    position: sticky;
+    top: 0;
+    background-color:#f2f2f2 ;
+    z-index: 500;
+    border-bottom: 2px solid #cbb59e;
+    padding: 15px 20px;
+}
+
+.feed__header h2 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.tweetbox__input img {
+    border-radius: 50%;
+    height: 40px;
+}
+
+.tweetBox {
+    padding-bottom: 10px;
+    border-bottom: 4px solid #cbb59e;
+    padding-right: 10px;
+}
+
+.tweetBox form {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweetbox__input {
+    display: flex;
+    padding: 20px;
+}
+
+.tweetbox__input input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.tweetBox__tweetButton {
+    background-color: #09721e;
+    border: none;
+    color: #ffffff;
+    font-weight: 900;
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.post__avatar img{
+    border-radius: 50%;
+    height: 40px;
+}
+
+.post{
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #cbb59e;
+}
+
+.post__body img{
+    width: 450px;
+    object-fit: contain;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.post__footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 50px;
+    margin-right: 300px;
+}
+
+.post__footer i{
+    cursor: pointer;
+}
+
+.post__footer i:hover{
+    color: #09721e;
+}
+
+.post__headerSpecial .fa-regular{
+    font-size: 14px !important;
+    color: #09721e;
+    margin-right: 5px;
+}
+
+.post__headerSpecial h4{
+    font-weight: 600;
+    font-size: 12px;
+    color: gray;
+}
+
+.post__headerText h3{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.post__headerDescription{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.post__body{
+    flex: 1;
+    padding: 10px;
+}
+
+.post__avatar{
+    padding: 20px;
+}
+
+.right-content {
+    flex: 0.4;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-card {
+    background-color: #f2f2f2;
+    border: 1px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 15px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: 700;
+    color: #000000;
+    font-size: 1.1em;
+}
+
+.handle {
+    font-weight: 400;
+    color: gray;
+    font-size: 0.9em;
+}
+
+.post-text {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #14171a;
+}
+
+.post-image {
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-footer2 {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-date {
+    font-size: 0.8em;
+    color: gray;
+}
+
+.btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btns i {
+    font-size: 1.2em;
+    color: #000000;
+    cursor: pointer;
+}
+
+.btns i:hover {
+    color: #09721e;
+}
+
+.right-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.right-content .post-card {
+    width: 100%;
+    max-width: 400px;
+    scroll-snap-align: start;
+    flex: 0 0 100%;
+}
+
+.container{
+    display: flex;
+    flex: 0 0 100%;
+    gap: 10px;
+    background: #09721e;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-padding: 30px;
+}
+
+* {
+    scrollbar-width: thin; 
+    scrollbar-color: #000000 #09721e; 
+}
+

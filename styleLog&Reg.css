@@ -1,0 +1,176 @@
+*{
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(imgLog&Reg.jpg);
+    background-size: cover;
+}
+
+.container{
+    z-index: 888;
+    padding: 40px;
+    border-radius: 20px;
+    border: 8px solid #09721e;
+    box-shadow: -5px -5px 15px rgba(255,255,255), 
+    5px 5px 15px rgb(95, 70, 24),
+    inset -5px -5px 15px rgba(255,255,255), 
+    inset  5px 5px 15px rgba(#09721e);
+    background-color: #f2f2f2;
+}
+
+.container .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.container .form.signin,
+.container.signinForm .form.signup{
+    display: none;
+}
+
+.container.signinForm .form.signin{
+    display: flex;
+}
+
+.container .form h2{
+    color: #09721e;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.container .form .inputBox{
+    position: relative;
+    width: 300px;
+}
+
+.container .form .inputBox input{
+    padding: 12px 10px 12px 48px;
+    border: none;
+    width: 100%;
+    background: #f2f2f2;
+    border: 1px solid rgba(203, 181, 158, 0.5);
+    color: #09721e;
+    font-weight: 300;
+    border-radius: 25px;
+    font-size: 1em;
+    box-shadow: -5px -5px 15px rgba(255,255,255), 
+    5px 5px 15px rgb(95, 70, 24);
+    transition: 0.5s;
+    outline: none;
+}
+
+.container .form .inputBox span{
+    position: absolute;
+    left: 0;
+    bottom: 0.3em;
+    padding: 12px 10px 12px 48px;
+    pointer-events: none;
+    font-size: 1em;
+    font-weight: 300;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    color: #09721e;
+}
+
+.container .form .inputBox input:valid ~ span,
+.container .form .inputBox input:focus ~ span{
+    color: #09721e;
+    border: 1px solid #09721e;
+    transform: translateX(25px) translateY(-44px);
+    font-size: 0.7em;
+    padding:  0 8px;
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.container .form .inputBox input:valid,
+.container .form .inputBox input:focus {
+border: 1px solid #09721e;
+}
+
+.container .form .inputBox i{
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    width: 25px;
+    padding-right: 8px;
+    padding: 2px 0;
+    color: #09721e;
+    border-right: 1px solid #09721e;
+}
+
+.container .form .inputBox input[type="submit"]{
+    background: #09721e;
+    color: black;
+    padding: 10px 0;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: -5px -5px 15px rgba(255,255,255), 
+    5px 5px 15px rgb(95, 70, 24),
+    inset -5px -5px 15px rgba(255,255,255), 
+    inset  5px 5px 15px rgba(#09721e
+);
+}
+
+.container .form p{
+    color: black;
+;
+    font-size: 0.75em;
+    font-weight: 300;
+}
+
+.container .form p a{
+    font-weight: 300;
+    color: #09721e;
+}
+
+.container .form.signup .HomeBtn{
+    z-index: 888;
+    position: absolute;
+    display: flex;
+    transition: 0.5s ease;
+    left: 810px;
+    top: 110px;
+}
+
+.container .form.signin .HomeBtn{
+    z-index: 888;
+    position: absolute;
+    display: flex;
+    transition: 0.5s ease;
+    left: 790px;
+    top: 178px;
+}
+
+.container .form.signup .HomeBtn a,
+.container .form.signin .HomeBtn a{
+    transition: 0.5s ease;
+    color: #09721e;
+}
+
+.container .form.signup .HomeBtn a:hover,
+.container .form.signin .HomeBtn a:hover{
+    transform: scale(1.6);
+}
+
+.overlay{
+    z-index: 777;
+    position: absolute;
+    background: rgba(166, 149, 82, 0.4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
