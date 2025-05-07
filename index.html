@@ -1,0 +1,98 @@
+<head>
+    <title>
+        NOME SITO LAVORO FOOD
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">NOME SITO</a>
+        <div class="menu-btn"></div>
+        
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">HOME</a>
+                <a href="newsLetter.html">NEWS LETTER</a>
+                <a href="Blog.html">BLOG</a>
+                <a href="agHub.html">AGRIFUTURE HUB</a>
+                <a href="Contact.html">CONTACT US</a>
+            </div>
+    </header>
+    <section class="home">
+        <video class="video-slide active" src="video3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="video1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="video2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="video4.mp4" autoplay muted loop></video>
+        <div class="content active">
+            <h1>Titolo A.<br><span>Titolo B</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero unde esse hic, laudantium tempore praesentium qui porro ullam, dolores, ipsum officiis totam mollitia dolorem accusamus in! Inventore hic omnis numquam?</p>
+            <a href="#">Scopri di Più</a>
+        </div>
+        <div class="content">
+            <h1>Titolo C.<br><span>Titolo D</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero unde esse hic, laudantium tempore praesentium qui porro ullam, dolores, ipsum officiis totam mollitia dolorem accusamus in! Inventore hic omnis numquam?</p>
+            <a href="#">Scopri di Più</a>
+        </div>
+        <div class="content">
+            <h1>Titolo E.<br><span>Titolo F</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero unde esse hic, laudantium tempore praesentium qui porro ullam, dolores, ipsum officiis totam mollitia dolorem accusamus in! Inventore hic omnis numquam?</p>
+            <a href="#">Scopri di Più</a>
+        </div>
+        <div class="content">
+            <h1>Titolo G.<br><span>Titolo H</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero unde esse hic, laudantium tempore praesentium qui porro ullam, dolores, ipsum officiis totam mollitia dolorem accusamus in! Inventore hic omnis numquam?</p>
+            <a href="#">Scopri di Più</a>
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+        
+        <div class="media-icons">
+            <a href="Login.html"><ion-icon name="person-circle-outline"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        //Javascript for video slider navigation
+        const btns= document.querySelectorAll(".nav-btn");
+        const slides= document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderNav= function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active")
+            })
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active")
+            })
+            
+            contents.forEach((content) => {
+                content.classList.remove("active")
+            })
+
+            btns[manual].classList.add("active");
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            })
+        })
+    </script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+
+
