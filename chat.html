@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="styleChat.css">
+</head>
+<body>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<div class="main-container">
+  <div class="navbar">
+    <div class="nav-left">
+      <button class="toggle-btn" id="toggleBtn">
+        <img src="images/icon-menu.svg" alt=""/>
+      </button>
+      <i class="fa-regular fa-sun main-logo"></i>
+    </div>
+    <div class="nav-right">
+      <form class="search-bar">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" placeholder="Search here...">
+      </form>
+      <i class="fa-solid fa-gear setting"></i>
+      <a href="#" class="user">
+        <img src="images/img-04.jpg" alt=""/>
+      </a>
+    </div>
+  </div>
+
+
+   <div class="bottom-sec">
+    <div class="side-menu" id="SideMenu">
+        <form class="search-bar">
+            <img src="images/icon-search.svg" alt=""/>
+            <input type="text" name="" placeholder="Cerca...">
+        </form>
+        <ul>
+          <li>
+            <img src="images/home-icon.png" alt=""/>
+            <a href="index.html" class="active">Home</a>
+          </li>
+          <li>
+            <img src="images/group-icon.png" alt=""/>
+            <a href="#">Gruppi</a>
+          </li>
+          <li>
+            <img src="images/profile-icon.png" alt=""/>
+            <a href="Blog.html">Profilo</a>
+          </li>
+          <li>
+            <img src="images/notification-icon.png" alt=""/>
+            <a href="#">Notifiche</a>
+          </li>
+          <li>
+            <img src="images/logout-icon.png" alt=""/>
+            <a href="#">Logout</a>
+          </li>
+        </ul>
+        <div class="chat-sec">
+            <div class="chat">
+                <img src="images/img-05.jpg" alt=""/>
+                <p>Liam Brown</p>
+            </div>
+            <div class="chat">
+                <img src="images/img-02.jpg" alt=""/>
+                <p>Emma Johnson</p>
+            </div>
+            <div class="chat">
+                <img src="images/img-03.jpg" alt=""/>
+                <p>Sophia Martinez</p>
+            </div>
+            <div class="chat">
+                <img src="images/img-06.jpg" alt=""/>
+                <p>Noah Wilson</p>
+            </div>
+          </div>
+    </div>
+
+  <div class="chat-section">
+     <div class="chat-header">
+        <div class="user-header">
+            <span class="user-main">
+              <img src="images/img-01.jpg" alt=""/>
+            </span>
+            <h2>Ava Davis</h2>
+        </div>
+        <img src="images/icon-threedot.png" alt="" class="threedot"/>
+     </div>
+
+     <div class="all-chat">
+        <div class="chat-box">
+            <img src="images/img-01.jpg" alt=""/>
+            <div class="chat-txt">
+                <h4>Ava <span>* 5m</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+        <div class="chat-box my-message">
+            <img src="images/img-04.jpg" alt=""/>
+            <div class="chat-txt">
+                <h4>Ava <span>* 5m</span></h4>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+        </div>
+        <div class="chat-box">
+            <img src="images/img-01.jpg" alt=""/>
+            <div class="chat-txt">
+                <h4>Ava <span>* 5m</span></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+        </div>
+     </div>
+     
+     <div class="chat-type">
+        <img src="images/icon-plus.png" alt=""/>
+
+         <form class="message-type">
+            <input type="text" name="text" placeholder="Enter Message...">
+            <img src="images/icon-emoji.png" alt=""/>
+            <img src="images/icon-attach.png" alt=""/>
+         </form>
+
+        <img src="images/icon-send.png" alt="" class="send-icon"/>
+     </div>
+
+  </div>
+
+   </div>
+   </div>
+  <script src="script.js"></script>
+</body>
+</html>
